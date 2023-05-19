@@ -1,0 +1,5 @@
+install.packages("haplotyper")
+df<-read.table("C:\\Users\\ishit\\OneDrive\\Desktop\\HAPLO.csv", header = FALSE, sep= ",")
+haplotyper::haplotyper(df)
+HAPLO_19<-haplotyper(df, Print = TRUE)
+write.csv(HAPLO_19, "C:\\Users\\ishit\\OneDrive\\Desktop\\results_final.csv", row.names=FALSE)
